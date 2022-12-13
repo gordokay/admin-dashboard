@@ -48,7 +48,7 @@ li {
 
 main {
   display: grid;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: auto auto;
 }
 
 header {
@@ -110,7 +110,7 @@ input {
   font-size: 1.2em;
 }
 
-button {
+header button {
   border: none;
   padding: 8px 16px;
   background-color: #79B791;
@@ -123,4 +123,80 @@ button {
 
 section {
   background-color: #E5F1E8;
+  display: grid;
+  grid-template: 1fr 1fr / 5fr 2fr;
+  padding: 16px;
+  gap: 16px;
+  align-items: start;
+}
+
+h2 {
+  margin-bottom: 8px;
+}
+
+.projects {
+  grid-row: span 2;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  padding: 24px 16px;
+  border-radius: 0.8em;
+  border-left: 8px solid #E5D1D0;
+}
+
+.card p{
+  margin-bottom: 36px;
+}
+
+.card div {
+  text-align: right;
+}
+
+.card button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.announcements > div,
+.trending > div {
+  background-color: white;
+  border-radius: 1em;
+  padding: 0 24px;
+  font-size: 0.8em;
+}
+
+.announcements > div > div {
+  border-bottom: 2px solid #E5F1E8;
+  padding-block: 24px;
+}
+
+.announcements > div > div:last-child {
+  border-bottom: none;
+}
+
+.trending > div {
+  padding-top: 24px;
+}
+
+.trending > div > div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 24px;
+}
+
+.trending > div p:first-child {
+  font-weight: bold;
+}
+
+.trending span {
+  font-size: 36px;
 }
